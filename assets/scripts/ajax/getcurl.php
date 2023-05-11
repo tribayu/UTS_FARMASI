@@ -25,14 +25,16 @@ $onscreen = '<table class="table" width="100%">
                 </thead>
             ';
 foreach($response_array as $resp){
-if ($resp['i_code'] [0] === "E" && $resp['g_code'][0] === "S" ){}
+if ($resp['i_code'] [0] === "E" && $resp['g_code'][0] === "S" ){
     $onscreen .= '<tr>
-                    <td>'.$resp['i_code'].'</td>
-                    <td>'.$resp['i_name'].'</td>
-                    <td>'.$resp['g_code'].'</td>
-                    <td>'.$resp['i_sell'].'</td>
-                    <td>'.$resp['i_qty'].'</td>
-                </tr>';
+    <td>'.$resp['i_code'].'</td>
+    <td>'.$resp['i_name'].'</td>
+    <td>'.$resp['g_code'].'</td>
+    <td>'.$resp['i_sell'].'</td>
+    <td>'.$resp['i_qty'].'</td>
+</tr>';
+}
+    
 }
 $onscreen .= '</table>';
 echo $onscreen;
